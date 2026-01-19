@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Atharva Portfolio</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior:smooth;
+}
+
+/*  BACKGROUND */
+body{
+  background: #f3e7e1;
+  overflow-x:hidden;
+}
+
+/* ✨ FLOATING SHAPES */
+.shape{
+  position: fixed;
+  border-radius:50%;
+  opacity:0.25;
+  animation: float 10s infinite ease-in-out;
+  z-index:-1;
+}
+.shape1{ width:180px; height:180px; background:#ffb4a2; top:10%; left:5%; }
+.shape2{ width:140px; height:140px; background:#ffd6a5; bottom:15%; right:10%; animation-duration:12s;}
+.shape3{ width:90px; height:90px; background:#cdb4db; top:60%; left:40%; animation-duration:8s;}
+
+@keyframes float{
+  0%,100%{ transform:translateY(0);}
+  50%{ transform:translateY(-40px);}
+}
+
+/* 🔝 NAVBAR */
+nav{
+  background:#3d405b;
+  padding:18px;
+  text-align:center;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin:0 18px;
+  font-weight:bold;
+  font-size:18px;
+  position:relative;
+}
+nav a::after{
+  content:'';
+  position:absolute;
+  width:0;
+  height:3px;
+  background:#f4a261;
+  left:0;
+  bottom:-6px;
+  transition:0.4s;
+}
+nav a:hover::after{
+  width:100%;
+}
+
+/* 📄 PAGES */
+.page{
+  display:none;
+  min-height:100vh;
+  padding:60px 10%;
+  animation: pageIn 0.8s ease;
+}
+
+@keyframes pageIn{
+  from{opacity:0; transform:scale(0.95);}
+  to{opacity:1; transform:scale(1);}
+}
+
+.page:target{
+  display:block;
+}
+
+/* 🏠 DEFAULT HOME */
+#home{
+  display:block;
+}
+
+/* 🧾 CARD */
+.card{
+  background:#fff3ec;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* 👤 IMAGE */
+.profile{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:#e07a5f;
+  padding:6px;
+  margin-bottom:20px;
+}
+.profile img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* 📝 TEXT */
+h1{
+  color:#3d405b;
+  margin-bottom:20px;
+}
+h2{
+  color:#6d597a;
+  margin-bottom:15px;
+}
+p{
+  color:#333;
+  line-height:1.8;
+}
+ul{
+  margin-left:20px;
+}
+li{
+  margin:10px 0;
+}
+
+/* 📊 TABLE */
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+th,td{
+  border:1px solid #999;
+  padding:14px;
+  text-align:center;
+}
+th{
+  background:#f4a261;
+  color:#fff;
+}
+
+/* 📞 BUTTONS */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 30px;
+  background:#3d405b;
+  color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+  transition:0.4s;
+}
+.btn:hover{
+  background:#f4a261;
+  transform:scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<div class="shape shape1"></div>
+<div class="shape shape2"></div>
+<div class="shape shape3"></div>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!--  HOME -->
+<section id="home" class="page">
+  <div class="card">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hello! I’m <strong>Atharva Shukla</strong>, a BTech AIML student passionate about technology and creativity.</p>
+    <p>Welcome to my website this is all about me </p>
+    <p>This website is created by html,css and xml languages</p>
+    <p>This website consist of various styles and animations which are done by css</p>
+    <p>This website hold every detail about till now</p>
+    <a class="btn" href="#about">Explore About Me</a>
+    <a class="btn" href="#contact">Contact Me</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="page">
+  <div class="card">
+    <div class="profile">
+      <img src="my photo.jpeg" alt="My Photo">
+    </div>
+    <h2>About Me</h2>
+    <ul>
+      <li>AI & ML enthusiast</li>
+      <li>Creative thinker</li>
+      <li>Strong interest in technology</li>
+      <li>Always eager to learn</li>
+      <li>Love to read all types of books</li>
+      <li>In free time i like to code</li>
+    </ul>
+  </div>
+</section>
+
+<!--  EDUCATION -->
+<section id="education" class="page">
+  <div class="card">
+    <h2>Educational Qualifications</h2>
+    <table>
+      <tr>
+        <th>Qualification</th>
+        <th>Institution</th>
+      </tr>
+      <tr>
+        <td>10th </td>
+        <td>St. Norbert Senior Secondary School</td>
+      </tr>
+        <td>12th </td>
+        <td>St. Norbert Senior Secondary School</td>
+      </tr>
+      <tr>
+        <td>BTech AIML (Microsoft)</td>
+        <td>Shree Vaishnav Vidyapeeth Vishwavidyalaya</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!--  ACHIEVEMENTS -->
+<section id="achievements" class="page">
+  <div class="card">
+    <h2> My Achievements</h2>
+    <ul>
+      <li>Made a website from HTML and Css</li>
+      <li>Got a certificate in Python programming</li>
+      <li>Know all the basics of HTML</li>
+      <li>Learning new skills</li>
+      <li>Exploring new technologies</li>
+    </ul>
+  </div>
+</section>
+
+<!--  CONTACT -->
+<section id="contact" class="page">
+  <div class="card">
+    <h2>Contact Me</h2>
+    <ul>
+      <li>Email: shuklatharva456@gmail.com</li>
+      <li>Instagram: <a href="https://instagram.com/shuklaatharva221" target="_blank">shuklaatharva221</a></li>
+      <li>
+  GitHub:
+  <a href="https://github.com/shuklatharva456ops" target="_blank">
+    github.com/shuklatharva456ops
+  </a>
+</li>
+
+          
+</a>
+</li>
+
+    </ul>
+  </div>
+</section>
+
+</body>
+</html>
